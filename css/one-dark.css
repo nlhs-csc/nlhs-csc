@@ -1,0 +1,89 @@
+
+/* ===== One Dark Syntax Theme ===== */
+
+.reveal pre {
+    background: #21252b;
+    border: 1px solid #3e4451;
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+.reveal pre code {
+    background: transparent;
+    color: #abb2bf;
+    font-family: "Cascadia Code", "JetBrains Mono",
+                 "Consolas", monospace;
+    font-size: 0.95em;
+    line-height: 1.6;
+    padding: 22px;
+    border-radius: 12px;
+}
+
+/* 註解 */
+.reveal .hljs-comment,
+.reveal .hljs-quote {
+    color: #5c6370;
+    font-style: italic;
+}
+
+/* 關鍵字、控制流程 */
+.reveal .hljs-keyword,
+.reveal .hljs-selector-tag,
+.reveal .hljs-literal {
+    color: #c678dd;
+}
+
+/* 函數、方法 */
+.reveal .hljs-title,
+.reveal .hljs-title.function_,
+.reveal .hljs-section {
+    color: #61afef;
+}
+
+/* 字串 */
+.reveal .hljs-string,
+.reveal .hljs-doctag {
+    color: #98c379;
+}
+
+/* 數字 */
+.reveal .hljs-number,
+.reveal .hljs-symbol,
+.reveal .hljs-bullet {
+    color: #d19a66;
+}
+
+/* 型別、類別 */
+.reveal .hljs-type,
+.reveal .hljs-built_in,
+.reveal .hljs-title.class_ {
+    color: #e5c07b;
+}
+
+/* 變數、參數 */
+.reveal .hljs-variable,
+.reveal .hljs-params,
+.reveal .hljs-property {
+    color: #e06c75;
+}
+
+/* 運算符、標點 */
+.reveal .hljs-operator,
+.reveal .hljs-punctuation {
+    color: #abb2bf;
+}
+
+/* 屬性名稱、標籤 */
+.reveal .hljs-attr,
+.reveal .hljs-attribute {
+    color: #d19a66;
+}
+
+/* 標記重要文字 */
+.reveal .hljs-emphasis {
+    font-style: italic;
+}
+
+.reveal .hljs-strong {
+    font-weight: 700;
+}

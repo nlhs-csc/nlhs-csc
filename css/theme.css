@@ -1,0 +1,268 @@
+.reveal {
+    --accent: #61afef;
+    --page-bg: #282c34;
+    --panel-bg: #21252b;
+    --border-color: #3e4451;
+
+    --text-main: #abb2bf;
+    --text-bright: #e6e6e6;
+
+    --blue: #61afef;
+    --green: #98c379;
+    --orange: #d19a66;
+    --yellow: #e5c07b;
+    --purple: #c678dd;
+    --cyan: #56b6c2;
+    --red: #e06c75;
+    --comment: #5c6370;
+
+    background: var(--page-bg);
+    color: var(--text-main);
+
+    font-family:
+        "Microsoft JhengHei",
+        "Noto Sans TC",
+        "PingFang TC",
+        sans-serif;
+}
+
+/* ===== 基本版面 ===== */
+
+.reveal .slides section {
+    box-sizing: border-box;
+    padding: 36px 56px;
+    color: var(--text-main);
+    text-align: left;
+    font-size: 28px;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+    color: var(--text-bright);
+    font-family: inherit;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+
+.reveal h1 {
+    font-size: 2.1em;
+}
+
+.reveal h2 {
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--accent);
+    font-size: 1.45em;
+}
+
+.reveal h3 {
+    color: var(--blue);
+    font-size: 1.1em;
+}
+
+.reveal p,
+.reveal li {
+    line-height: 1.6;
+}
+
+.reveal li {
+    margin: 10px 0;
+}
+
+.reveal strong {
+    color: var(--orange);
+}
+
+.reveal a {
+    color: var(--blue);
+}
+
+/* ===== 行內程式碼 ===== */
+
+.reveal :not(pre) > code {
+    padding: 2px 7px;
+    border-radius: 5px;
+    background: var(--panel-bg);
+    color: var(--green);
+    font-family:
+        "Cascadia Code",
+        "Consolas",
+        monospace;
+    font-size: 0.85em;
+}
+
+/* ===== 封面 ===== */
+
+.reveal .slides section.cover {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            #354052 0,
+            transparent 42%
+        ),
+        var(--page-bg);
+}
+
+.reveal .cover h1 {
+    color: var(--blue);
+    font-size: 2.2em;
+}
+
+.reveal .cover h2 {
+    border: none;
+    color: var(--text-main);
+    font-size: 1.1em;
+}
+
+/* ===== 觀念頁 ===== */
+
+.reveal .concept {
+    background: var(--page-bg);
+}
+
+.reveal .concept blockquote {
+    width: 90%;
+    margin: 24px 0;
+    padding: 16px 24px;
+    border-left: 5px solid var(--blue);
+    border-radius: 0 8px 8px 0;
+    background: var(--panel-bg);
+    color: var(--text-main);
+    box-shadow: none;
+    font-style: normal;
+}
+
+/* ===== 程式碼頁 ===== */
+
+.reveal .code {
+    background: var(--page-bg);
+}
+
+.reveal .code pre {
+    width: 100%;
+    font-size: 0.72em;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: none;
+    background: var(--panel-bg);
+}
+
+.reveal .code pre code {
+    box-sizing: border-box;
+    max-height: 460px;
+    padding: 22px;
+    border-radius: 12px;
+    background: transparent;
+    color: var(--text-main);
+
+    font-family:
+        "Cascadia Code",
+        "JetBrains Mono",
+        "Consolas",
+        monospace;
+
+    line-height: 1.6;
+    tab-size: 4;
+}
+
+/* ===== One Dark 語法高亮 ===== */
+
+.reveal .hljs-comment,
+.reveal .hljs-quote {
+    color: var(--comment);
+    font-style: italic;
+}
+
+.reveal .hljs-keyword,
+.reveal .hljs-literal,
+.reveal .hljs-selector-tag {
+    color: var(--purple);
+}
+
+.reveal .hljs-title,
+.reveal .hljs-title.function_,
+.reveal .hljs-section {
+    color: var(--blue);
+}
+
+.reveal .hljs-string,
+.reveal .hljs-doctag {
+    color: var(--green);
+}
+
+.reveal .hljs-number,
+.reveal .hljs-symbol,
+.reveal .hljs-bullet {
+    color: var(--orange);
+}
+
+.reveal .hljs-type,
+.reveal .hljs-built_in,
+.reveal .hljs-title.class_ {
+    color: var(--yellow);
+}
+
+.reveal .hljs-variable,
+.reveal .hljs-params,
+.reveal .hljs-property {
+    color: var(--red);
+}
+
+.reveal .hljs-attr,
+.reveal .hljs-attribute {
+    color: var(--orange);
+}
+
+.reveal .hljs-operator,
+.reveal .hljs-punctuation {
+    color: var(--text-main);
+}
+
+/* ===== 練習題頁 ===== */
+
+.reveal .exercise {
+    background: var(--page-bg);
+}
+
+.reveal .exercise h2 {
+    color: var(--orange);
+    border-color: var(--orange);
+}
+
+.reveal .exercise blockquote {
+    border-left-color: var(--orange);
+    background: var(--panel-bg);
+    box-shadow: none;
+}
+
+/* ===== 總結頁 ===== */
+
+.reveal .summary {
+    background: var(--page-bg);
+}
+
+.reveal .summary strong {
+    color: var(--green);
+}
+
+/* ===== 頁碼、控制按鈕、進度條 ===== */
+
+.reveal .slide-number {
+    color: var(--text-main);
+    font-size: 16px;
+}
+
+.reveal .controls {
+    color: var(--blue);
+}
+
+.reveal .progress {
+    color: var(--blue);
+}

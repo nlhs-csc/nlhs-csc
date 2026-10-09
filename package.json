@@ -1,0 +1,13 @@
+{
+  "name": "club-teaching-slides",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "http-server . -c-1",
+    "export:pptx": "node scripts/export-pptx.mjs"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "reveal.js": "^5.2.1"
+  }
+}
