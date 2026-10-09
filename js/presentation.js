@@ -43,7 +43,7 @@ function renderHome() {
     <a class="course-card"
        href="?lesson=${encodeURIComponent(lesson.id)}">
       <div class="course-number">
-        LESSON ${String(index + 1).padStart(2, "0")}
+        LESSON ${String(index).padStart(2, "0")}
       </div>
       <h2>${lesson.title}</h2>
       <p>${lesson.description}</p>
