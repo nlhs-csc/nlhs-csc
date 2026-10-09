@@ -1,6 +1,11 @@
 
 const lessons = [
   {
+    id: "temp",
+    title: "預覽",
+    description: "這是一個預覽頁面，並非正式課程"
+  },
+  {
     id: "data_type",
     title: "資料型別",
     description: "認識資料如何儲存，以及 C++ 的基本資料型別"
