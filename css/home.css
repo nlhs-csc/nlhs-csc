@@ -1,0 +1,193 @@
+/* =========================
+首頁 Home Page
+Theme: One Dark
+==========  =============== */
+
+:root {
+--home-bg: #282c34;
+--home-card-bg: #21252b;
+--home-border: #3e4451;
+
+--home-text: #abb2bf;
+--home-title: #e6e6e6;
+--home-muted: #5c6370;
+
+--home-blue: #61afef;
+--home-cyan: #56b6c2;
+--home-green: #98c379;
+
+}
+
+/* 整個首頁 */
+#home-page {
+min-height: 100vh;
+box-sizing: border-box;
+padding: 64px 8%;
+
+background: var(--home-bg);
+color: var(--home-text);
+
+font-family:
+    "Microsoft JhengHei",
+    "Noto Sans TC",
+    "PingFang TC",
+    sans-serif;
+
+}
+
+/* 首頁標題區 */
+.home-header {
+max-width: 1000px;
+margin: 0 auto 44px;
+}
+
+.home-header h1 {
+margin: 0 0 16px;
+
+color: var(--home-blue);
+font-size: clamp(32px, 5vw, 48px);
+font-weight: 700;
+letter-spacing: 1px;
+
+}
+
+.home-header p {
+margin: 0;
+
+font-size: 18px;
+line-height: 1.9;
+
+}
+
+/* 課程卡片網格 */
+.course-grid {
+display: grid;
+grid-template-columns: repeat(
+auto-fit,
+minmax(240px, 1fr)
+);
+
+gap: 22px;
+
+max-width: 1000px;
+margin: 0 auto;
+
+}
+
+/* 單張課程卡片 */
+.course-card {
+display: block;
+box-sizing: border-box;
+
+padding: 26px;
+min-height: 190px;
+
+background: var(--home-card-bg);
+border: 1px solid var(--home-border);
+border-radius: 14px;
+
+color: var(--home-text);
+text-decoration: none;
+
+transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+
+}
+
+/* 滑鼠移到卡片上 */
+.course-card {
+transform: translateY(-4px);
+
+border-color: var(--home-blue);
+background: #2c313a;
+
+}
+
+/* 鍵盤操作時的焦點 */
+.course-card {
+outline: 2px solid var(--home-blue);
+outline-offset: 4px;
+}
+
+/* 課程編號 */
+.course-number {
+margin-bottom: 14px;
+
+color: var(--home-cyan);
+font-family: "Consolas", monospace;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 1.5px;
+
+}
+
+/* 課程名稱 */
+.course-card h2 {
+margin: 0 0 12px;
+
+color: var(--home-title);
+font-size: 23px;
+font-weight: 700;
+
+}
+
+/* 課程簡介 */
+.course-card p {
+margin: 0;
+
+color: var(--home-text);
+font-size: 15px;
+line-height: 1.8;
+
+}
+
+/* 首頁底部 */
+.home-footer {
+max-width: 1000px;
+margin: 48px auto 0;
+padding-top: 20px;
+
+border-top: 1px solid var(--home-border);
+
+color: var(--home-muted);
+font-family: "Consolas", monospace;
+font-size: 14px;
+text-align: center;
+
+}
+
+/* 手機版 */
+@media (max-width: 600px) {
+#home-page {
+padding: 40px 20px;
+}
+
+.home-header {
+    margin-bottom: 32px;
+}
+
+.home-header p {
+    font-size: 16px;
+}
+
+.course-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.course-card {
+    min-height: auto;
+    padding: 22px;
+}
+
+.course-card h2 {
+    font-size: 21px;
+}
+
+.home-footer {
+    margin-top: 36px;
+}
+
+}
