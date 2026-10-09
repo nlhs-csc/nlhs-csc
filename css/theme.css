@@ -16,7 +16,7 @@
     --red: #e06c75;
     --comment: #5c6370;
 
-    background: #282c34;
+    background: var(--page-bg);
     color: var(--text-main);
 
     font-family:
