@@ -28,6 +28,17 @@
 
 /* ===== 基本版面 ===== */
 
+/* 簡報整體背景 */
+.reveal-viewport {
+    background: #282c34 !important;
+}
+
+/* 每一張投影片的背景 */
+.reveal .slides section {
+    background: #282c34;
+    color: #abb2bf;
+}
+
 .reveal .slides section {
     box-sizing: border-box;
     padding: 36px 56px;
