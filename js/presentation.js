@@ -1,4 +1,7 @@
-//import RevealMath from "../node_modules/reveal.js/plugin/math/math.esm.js";
+import Reveal from "https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.esm.js";
+import RevealMarkdown from "https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/markdown/markdown.esm.js";
+import RevealHighlight from "https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/highlight/highlight.esm.js";
+import RevealMath from "https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/math/math.esm.js";
 
 const lessons = [
   {
