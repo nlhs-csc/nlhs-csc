@@ -132,6 +132,21 @@
     font-size: 1.1em;
 }
 
+
+/* ===== 複習頁 ===== */
+.reveal .review {
+    background: var(--page-bg);
+}
+
+.reveal .review h2 {
+    color: var(--cyan);
+    border-color: var(--cyan);
+}
+
+.reveal .review strong {
+    color: var(--cyan);
+}
+
 /* ===== 觀念頁 ===== */
 
 .reveal .concept {
@@ -259,7 +274,66 @@
     background: var(--page-bg);
 }
 
+.reveal .summary h2 {
+    border-color: var(--green);
+}
+
 .reveal .summary strong {
+    color: var(--green);
+}
+
+
+/* ===== Markdown 表格 ===== */
+
+.reveal .slides table {
+    display: table;
+    width: 85%;
+    margin: 24px auto;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid var(--border-color);
+
+    color: var(--text-main);
+    font-size: 0.85em;
+    background: var(--panel-bg);
+}
+
+/* 表格標題與儲存格 */
+.reveal .slides table th,
+.reveal .slides table td {
+    padding: 12px 18px;
+    border: 1px solid var(--border-color);
+
+    color: var(--text-main);
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* 標題列 */
+.reveal .slides table th {
+    background: #2c313a;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+/* 偶數資料列 */
+.reveal .slides table tbody tr:nth-child(even) {
+    background: #282c34;
+}
+
+/* 滑鼠移過資料列 
+.reveal .slides table tbody tr:hover {
+    background: #343b47;
+}*/
+
+/* 表格內的粗體 */
+.reveal .slides table strong {
+    color: var(--orange);
+}
+
+/* 表格內的行內程式碼 */
+.reveal .slides table code {
     color: var(--green);
 }
 

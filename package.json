@@ -7,12 +7,17 @@
   "private": true,
   "scripts": {
     "start": "http-server . -c-1",
-    "export:pptx": "node scripts/export-pptx.mjs"
+    "export": "node scripts/export-slides.mjs",
+    "export:pptx": "node scripts/export-slides.mjs pptx",
+    "export:pdf": "node scripts/export-slides.mjs pdf"
   },
   "devDependencies": {
     "http-server": "^14.1.1",
     "playwright": "^1.64.0",
     "pptxgenjs": "^4.0.1",
     "reveal.js": "^5.2.1"
+  },
+  "dependencies": {
+    "katex": "^0.19.0"
   }
 }

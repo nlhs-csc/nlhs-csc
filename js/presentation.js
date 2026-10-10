@@ -1,3 +1,4 @@
+import RevealMath from "../node_modules/reveal.js/plugin/math/math.esm.js";
 
 const lessons = [
   {
@@ -193,7 +194,27 @@ function renderLesson(lesson) {
     progress: true,
     slideNumber: "c/t",
     transition: "fade",
-    plugins: [RevealMarkdown, RevealHighlight]
+    mathjax3: {
+    mathjax:
+      "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+      tex: {
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"]
+        ]
+      },
+      options: {
+        skipHtmlTags: [
+          "script",
+          "noscript",
+          "style",
+          "textarea",
+          "pre",
+          "code"
+      ]
+      }
+    },
+    plugins: [RevealMarkdown, RevealHighlight, RevealMath.MathJax3]
   }).then(() => {
     processCustomImages();
 
