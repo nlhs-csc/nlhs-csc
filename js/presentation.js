@@ -54,8 +54,9 @@ function renderHome() {
     <header class="home-header">
       <h1>資研社｜教學教材</h1>
       <p>
-        從基礎開始，一起探索程式設計的世界。<br>
-        選擇一堂課，開始學習吧！
+        從基礎開始，一起探索程式設計的世界<br>
+        從基礎的語法到進階的演算法<br>
+        讓我們一起學習然後一起打比賽吧 :D
       </p>
     </header>
 
@@ -64,9 +65,99 @@ function renderHome() {
     </section>
 
     <footer class="home-footer">
-      Small steps, big changes.
+      內高資研、科技無限<br>
+      NLCS、CPDP
     </footer>
   `;
+}
+
+
+function processCustomImages() {
+  const links = document.querySelectorAll(
+    ".reveal .slides section a"
+  );
+
+  links.forEach((link) => {
+    if (link.textContent.trim() !== "!image") return;
+
+    // 避免同一個圖片連結重複處理
+    if (!link.isConnected) return;
+
+    // 取得圖片連結後方的參數
+    let width = "";
+    let position = "右";
+    let caption = "";
+
+    const next = link.nextSibling;
+
+    if (next && next.nodeType === Node.TEXT_NODE) {
+      const text = next.textContent;
+
+      const match = text.match(
+        /^\s*\{\s*([^,}]*)\s*,\s*([^,}]*)\s*,\s*([^}]*)\s*\}/
+      );
+
+      if (match) {
+        width = match[1].trim();
+        position = match[2].trim() || "右";
+        caption = match[3].trim();
+
+        // 移除已解析的參數
+        next.textContent = text.slice(match[0].length);
+
+        if (!next.textContent.trim()) {
+          next.remove();
+        }
+      }
+    }
+
+    // 建立圖片區塊
+    const figure = document.createElement("figure");
+    figure.className = "md-image-wrap";
+
+    const positions = {
+      "左": "pos-left",
+      "中": "pos-center",
+      "右": "pos-right"
+    };
+
+    figure.classList.add(
+      positions[position] || "pos-center"
+    );
+
+    const img = document.createElement("img");
+    img.src = link.href;
+    img.alt = caption;
+
+    // 有指定寬度才設定，否則使用圖片原始尺寸
+    if (/^\d+(\.\d+)?$/.test(width)) {
+      img.style.width = `${width}px`;
+    }
+
+    figure.appendChild(img);
+
+    // 圖片備註
+    if (caption) {
+      const figcaption = document.createElement("figcaption");
+      figcaption.className = "md-image-caption";
+      figcaption.textContent = caption;
+      figure.appendChild(figcaption);
+    }
+
+    // 替換圖片語法
+    link.replaceWith(figure);
+
+    // 清除可能殘留的參數文字
+    const remaining = figure.nextSibling;
+
+    if (
+      remaining &&
+      remaining.nodeType === Node.TEXT_NODE &&
+      !remaining.textContent.trim()
+    ) {
+      remaining.remove();
+    }
+  });
 }
 
 function renderLesson(lesson) {
@@ -103,6 +194,11 @@ function renderLesson(lesson) {
     slideNumber: "c/t",
     transition: "fade",
     plugins: [RevealMarkdown, RevealHighlight]
+  }).then(() => {
+    processCustomImages();
+
+    Reveal.on("ready", processCustomImages);
+    Reveal.on("slidechanged", processCustomImages);
   });
 }
 

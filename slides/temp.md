@@ -14,9 +14,12 @@
 
 完成這堂課後，你將能夠：
 
+[!image](/public/images/tqs.png){300, , awa} [!image](/public/images/tqs.png){300, , awa}
+
 * 理解核心概念
 * 看懂基本程式碼
 * 完成簡單練習
+
 
 ---
 

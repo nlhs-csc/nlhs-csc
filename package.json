@@ -1,4 +1,7 @@
 {
+  "overrides": {
+    "image-size": "2.0.4"
+  },
   "name": "club-teaching-slides",
   "version": "1.0.0",
   "private": true,
@@ -8,6 +11,8 @@
   },
   "devDependencies": {
     "http-server": "^14.1.1",
+    "playwright": "^1.64.0",
+    "pptxgenjs": "^4.0.1",
     "reveal.js": "^5.2.1"
   }
 }
