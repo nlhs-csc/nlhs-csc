@@ -1,4 +1,4 @@
-import RevealMath from "../node_modules/reveal.js/plugin/math/math.esm.js";
+//import RevealMath from "../node_modules/reveal.js/plugin/math/math.esm.js";
 
 const lessons = [
   {
